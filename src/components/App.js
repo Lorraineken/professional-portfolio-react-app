@@ -6,9 +6,26 @@ import Home from './Home';
 
 function App() {
 
-   const [user_name,setUser] = useState("")
-   const [user_id,setId] = useState()
+  const skills_URL ='http://localhost:9292/skills'
 
+   const [user_name,setUser] = useState("")
+   const [user_id,setId] = useState(0)
+   const [user_skills,setSkills] = useState()
+
+  
+
+   useEffect(()=>{
+    fetch(skills_URL)
+    .then(response => response.json())
+    .then(data => {
+     const skills= data.filter((item) => 
+        item.user_id === user_id
+      )
+      setSkills(() => skills)
+      
+    })
+   },[])
+  
    
   return (
     <div className="App">
