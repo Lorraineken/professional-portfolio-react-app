@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 
-function Login(){
+function Login({setUser,setId}){
     
    const login_URL ='http://localhost:9292/login'
    const [email,setEmail] = useState("");
@@ -23,6 +23,8 @@ function Login(){
      })
      .then(response => response.json())
      .then(data => {
+       setUser(data.user_name)
+       setId(data.user_id)
       if (data.success === true){
          navigate('/home')
       }

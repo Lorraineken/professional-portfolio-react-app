@@ -6,14 +6,17 @@ import Home from './Home';
 
 function App() {
 
-   
+   const [user_name,setUser] = useState("")
+   const [user_id,setId] = useState()
 
+   console.log(user_name)
+   console.log(user_id)
   return (
     <div className="App">
       <Routes>
         <Route
          path ="/"
-         element={<Login/>}
+         element={<Login setUser={setUser} setId={setId}/>}
         />
         <Route
         path ="/home"
