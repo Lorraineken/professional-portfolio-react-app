@@ -20,11 +20,14 @@ function App() {
     fetch(skills_URL)
     .then(response => response.json())
     .then(data => {
+      const skills_array = []
       data.map((item) => {
         if (item.user_id === user_id){
-          console.log(item)
+          skills_array.push(item)
         }
       } )
+      setSkills(skills_array) 
+      
     })
    },[user_id])
   
@@ -34,9 +37,9 @@ function App() {
     .then(data => {
       
        setProjects(data)
-      
+    
     })
-   },[])
+   },[user_id])
   
    
   return (
