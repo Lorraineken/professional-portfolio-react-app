@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import {Link, useNavigate} from "react-router-dom";
 
 function Login({setUser,setId}){
@@ -6,18 +6,16 @@ function Login({setUser,setId}){
    const login_URL ='http://localhost:9292/login'
    const [email,setEmail] = useState("");
    const [password,setPassword] = useState("");
-   
+   const [isLoggedIn,setLogIn] = useState(false);
    const navigate = useNavigate();
 
    const login_details = {
     "email":email,
     "password":password
    }
-
-   function handleSubmit(e){
-     e.preventDefault()
-
-     fetch (login_URL, {
+   
+   useEffect(()=>{
+    fetch (login_URL, {
       method: 'POST',
       body:JSON.stringify(login_details)
      })
@@ -28,8 +26,13 @@ function Login({setUser,setId}){
       if (data.success === true){
          navigate('/home')
       }
-     })
+     })  
+   },[isLoggedIn])
 
+   
+   function handleSubmit(e){
+     e.preventDefault()
+     setLogIn(()=>true)
    }
        
     return(
