@@ -7,10 +7,12 @@ import Home from './Home';
 function App() {
 
   const skills_URL ='http://localhost:9292/skills'
+  const projects_URL = 'http://localhost:9292/projects'
 
    const [user_name,setUser] = useState("")
    const [user_id,setId] = useState(0)
    const [user_skills,setSkills] = useState()
+   const [projects,setProjects] = useState()
 
   
 
@@ -25,6 +27,14 @@ function App() {
       
     })
    },[])
+
+   useEffect(()=>{
+    fetch(projects_URL)
+    .then(response => response.json())
+    .then(data => {
+       setProjects(() => data)
+    })
+   },[])
   
    
   return (
@@ -36,7 +46,7 @@ function App() {
         />
         <Route
         path ="/home"
-        element ={<Home user_name={user_name} />}
+        element ={<Home user_name={user_name} user_skills={user_skills}/>}
         />
       </Routes>
     </div>

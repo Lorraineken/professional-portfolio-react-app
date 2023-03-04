@@ -1,6 +1,6 @@
 import React from "react";
 
-function Home({user_name}){
+function Home({user_name,user_skills}){
 
     return (
         <div>
