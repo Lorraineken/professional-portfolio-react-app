@@ -9,8 +9,7 @@ function App() {
    const [user_name,setUser] = useState("")
    const [user_id,setId] = useState()
 
-   console.log(user_name)
-   console.log(user_id)
+   
   return (
     <div className="App">
       <Routes>
@@ -20,7 +19,7 @@ function App() {
         />
         <Route
         path ="/home"
-        element ={<Home/>}
+        element ={<Home user_name={user_name} />}
         />
       </Routes>
     </div>
