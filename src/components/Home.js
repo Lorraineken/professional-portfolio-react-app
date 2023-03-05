@@ -18,6 +18,7 @@ function Home({user_name,user_skills,projects,user_id}){
         return(
         <div>
         <p>{`Name: ${item.name}`}
+        <button>Update</button>
          <button onClick={() => deleteSkill(item.id)}>x</button>
         </p> 
         <p>{`Category: ${item.category}`}</p>
@@ -39,6 +40,7 @@ function Home({user_name,user_skills,projects,user_id}){
         return(
         <div>
         <p>{`Name: ${item.name}`}
+        <button>Update</button>
         <button onClick={() => deleteProject(item.id)}>x</button>
         </p> 
         <p>{`Description: ${item.description}`}</p>
