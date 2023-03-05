@@ -57,7 +57,7 @@ function App() {
         />
         <Route
         path ="/home"
-        element ={<Home user_name={user_name} user_skills={user_skills} projects={projects}/>}
+        element ={<Home user_name={user_name} user_skills={user_skills} projects={projects} user_id={user_id}/>}
         />
         <Route
          path = "/newproject"

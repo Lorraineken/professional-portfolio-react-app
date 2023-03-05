@@ -1,9 +1,10 @@
 
 import React, {useState}from "react";
+import {Link, useNavigate} from "react-router-dom";
 
-function Home({user_name,user_skills,projects}){
+function Home({user_name,user_skills,projects,user_id}){
 
-   
+    const navigate = useNavigate();
     const display_skills =user_skills.map((item) => 
     {
         return(
@@ -26,7 +27,15 @@ function Home({user_name,user_skills,projects}){
         )
     })
     
-     
+     function addskill(){
+        console.log("ADD SKILL")
+        navigate('/newskill')
+     }
+
+     function addProject(){
+        console.log("ADD PROJECT")
+        navigate('/newproject')
+     }
 
     
     return (
@@ -35,11 +44,13 @@ function Home({user_name,user_skills,projects}){
        <h2>{user_name}</h2>
         <div>
             <h3>Skills</h3>
+            <button onClick={() =>addskill()}>Add Skill</button>
             <div>
             {display_skills}
             </div>
              
             <h3>Projects</h3>
+            <button onClick={() =>addProject()}>Add Project</button>
             <div>
             {display_projects}
             </div>

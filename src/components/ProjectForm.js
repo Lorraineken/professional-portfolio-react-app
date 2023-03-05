@@ -20,8 +20,6 @@ function ProjectForm(){
             method: 'POST',
             body:JSON.stringify(project_details)
            })
-           .then(response => response.json())
-           .then(data => console.log(data))
     },[])
 
     function handleSubmit(e){
@@ -36,7 +34,7 @@ function ProjectForm(){
           <label htmlFor="name">Name: </label>
           <input type="text" name="name" id="new-name" onChange={(e) => setProjName(e.target.value)}/>
           <label htmlFor="description">Description: </label>
-          <input type="text" name="Instrument" id="new-project" onChange={(e) => setDescription(e.target.value)} />
+          <input type="text" name="Add Project" id="new-project" onChange={(e) => setDescription(e.target.value)} />
           <input type="submit" value="Add Project" />
          </form>
          
