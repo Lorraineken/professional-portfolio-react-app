@@ -1,12 +1,28 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 
 function ProjectForm(){
+
+    const addProjectURL ='http://localhost:9292/projects/create'
 
     const [projName,setProjName] = useState("")
     const [description,setDescription] = useState("")
 
+
+    const project_details = {
+        "name":projName,
+        "description":description
+    }
+
+    useEffect(() =>{
+        fetch (addProjectURL, {
+            method: 'POST',
+            body:JSON.stringify(project_details)
+           })
+    },[])
+
     function handleSubmit(e){
         e.preventDefault()
+        
     }
 
     return (
