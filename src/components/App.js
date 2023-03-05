@@ -61,7 +61,7 @@ function App() {
         />
         <Route
          path = "/newproject"
-         element ={<ProjectForm/>}
+         element ={<ProjectForm user_id={user_id}/>}
         />
         <Route 
         path = '/newskill'

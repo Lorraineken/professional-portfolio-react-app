@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 
-function ProjectForm(){
+function ProjectForm({user_id}){
 
     const addProjectURL ='http://localhost:9292/projects/create'
 
@@ -12,19 +12,20 @@ function ProjectForm(){
 
     const project_details = {
         "name":projName,
-        "description":description
+        "description":description,
+        "user_id":user_id
     }
+    
 
-    useEffect(() =>{
+    function handleSubmit(e){
+        e.preventDefault()
         fetch (addProjectURL, {
             method: 'POST',
             body:JSON.stringify(project_details)
            })
-    },[])
-
-    function handleSubmit(e){
-        e.preventDefault()
-        navigate("/home")
+           .then(response => response.json())
+           .then(data => console.log(data))
+        navigate('/home')
     }
 
     return (
