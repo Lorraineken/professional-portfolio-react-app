@@ -2,10 +2,11 @@
 import React, {useState}from "react";
 import {Link, useNavigate} from "react-router-dom";
 
-function Home({user_name,user_skills,projects,user_id}){
+function Home({user_name,user_skills,projects,setSkillId}){
 
 
     const navigate = useNavigate();
+    
 
     function deleteSkill(id){
         fetch(`http://localhost:9292/skills/destroy/${id}`,{
@@ -13,12 +14,17 @@ function Home({user_name,user_skills,projects,user_id}){
            })
     }
 
+   
+
     const display_skills =user_skills.map((item) => 
     {
         return(
         <div>
         <p>{`Name: ${item.name}`}
-        <button>Update</button>
+        <button onClick={() =>{
+            navigate('/updateskill')
+          return  setSkillId(item.id)
+        }}>Update</button>
          <button onClick={() => deleteSkill(item.id)}>x</button>
         </p> 
         <p>{`Category: ${item.category}`}</p>

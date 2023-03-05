@@ -5,6 +5,7 @@ import Login from './Login';
 import Home from './Home';
 import ProjectForm from './ProjectForm';
 import SkillForm from './SkillForm';
+import SkillUpdate from './SkillUpdate';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
    const [user_id,setId] = useState(0)
    const [user_skills,setSkills] = useState([])
    const [projects,setProjects] = useState([])
+   const [updateSkillId,setSkillId] = useState(0)
 
   
 
@@ -57,7 +59,7 @@ function App() {
         />
         <Route
         path ="/home"
-        element ={<Home user_name={user_name} user_skills={user_skills} projects={projects} user_id={user_id}/>}
+        element ={<Home user_name={user_name} user_skills={user_skills} projects={projects} setSkillId={setSkillId}/>}
         />
         <Route
          path = "/newproject"
@@ -66,6 +68,10 @@ function App() {
         <Route 
         path = '/newskill'
         element ={<SkillForm user_id={user_id}/>}
+        />
+        <Route
+          path = '/updateskill'
+          element ={<SkillUpdate skill_id={updateSkillId}/>}
         />
       </Routes>
     </div>
