@@ -65,7 +65,7 @@ function App() {
         />
         <Route 
         path = '/newskill'
-        element ={<SkillForm/>}
+        element ={<SkillForm user_id={user_id}/>}
         />
       </Routes>
     </div>
