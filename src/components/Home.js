@@ -4,6 +4,7 @@ import {Link, useNavigate} from "react-router-dom";
 
 function Home({user_name,user_skills,projects,user_id}){
 
+
     const navigate = useNavigate();
     const display_skills =user_skills.map((item) => 
     {
@@ -15,14 +16,24 @@ function Home({user_name,user_skills,projects,user_id}){
         </div>
         )
     })
-    
+
+    function deleteProject(id){
+       fetch(`http://localhost:9292/projects/destroy/${id}`,{
+        method: 'DELETE'
+       })
+    }
+
+
     const display_projects =projects.map((item) => 
     {
         
         return(
         <div>
-        <p>{`Name: ${item.name}`}</p> 
+        <p>{`Name: ${item.name}`}
+        <button onClick={() => deleteProject(item.id)}>x</button>
+        </p> 
         <p>{`Description: ${item.description}`}</p>
+        
         </div>
         )
     })
