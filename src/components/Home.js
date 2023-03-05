@@ -6,11 +6,20 @@ function Home({user_name,user_skills,projects,user_id}){
 
 
     const navigate = useNavigate();
+
+    function deleteSkill(id){
+        fetch(`http://localhost:9292/skills/destroy/${id}`,{
+            method: 'DELETE'
+           })
+    }
+
     const display_skills =user_skills.map((item) => 
     {
         return(
         <div>
-        <p>{`Name: ${item.name}`}</p> 
+        <p>{`Name: ${item.name}`}
+         <button onClick={() => deleteSkill(item.id)}>x</button>
+        </p> 
         <p>{`Category: ${item.category}`}</p>
         
         </div>
