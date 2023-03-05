@@ -3,6 +3,8 @@ import {Route,Routes} from 'react-router-dom';
 import '../App.css';
 import Login from './Login';
 import Home from './Home';
+import ProjectForm from './ProjectForm';
+import SkillForm from './SkillForm';
 
 function App() {
 
@@ -52,6 +54,14 @@ function App() {
         <Route
         path ="/home"
         element ={<Home user_name={user_name} user_skills={user_skills} projects={projects}/>}
+        />
+        <Route
+         path = "/newproject"
+         element ={<ProjectForm/>}
+        />
+        <Route 
+        path = '/newskill'
+        element ={<SkillForm/>}
         />
       </Routes>
     </div>
