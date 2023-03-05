@@ -3,32 +3,31 @@ import React, {useState}from "react";
 
 function Home({user_name,user_skills,projects}){
 
-     const skills_project_id = []
    
     const display_skills =user_skills.map((item) => 
     {
-        skills_project_id.push(item.project_id)
         return(
         <div>
-        <p>{item.name} - {item.category}</p> 
+        <p>{`Name: ${item.name}`}</p> 
+        <p>{`Category: ${item.category}`}</p>
+        
         </div>
         )
     })
     
-    const display_projects = projects.map((item) => {
-
-       const project= skills_project_id.map((proj)=>{
-            if (proj === item.id) {
-                
-                return (
-                    <div>
-                    <p>{item.name}</p> 
-                    </div>
-                )
-            }
-        })
-       return project
+    const display_projects =projects.map((item) => 
+    {
+        
+        return(
+        <div>
+        <p>{`Name: ${item.name}`}</p> 
+        <p>{`Description: ${item.description}`}</p>
+        </div>
+        )
     })
+    
+     
+
     
     return (
         <div>

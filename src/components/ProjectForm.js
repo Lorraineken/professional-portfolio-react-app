@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 
 function ProjectForm(){
 
@@ -6,6 +7,7 @@ function ProjectForm(){
 
     const [projName,setProjName] = useState("")
     const [description,setDescription] = useState("")
+    const navigate = useNavigate();
 
 
     const project_details = {
@@ -18,11 +20,13 @@ function ProjectForm(){
             method: 'POST',
             body:JSON.stringify(project_details)
            })
+           .then(response => response.json())
+           .then(data => console.log(data))
     },[])
 
     function handleSubmit(e){
         e.preventDefault()
-        
+        navigate("/home")
     }
 
     return (

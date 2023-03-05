@@ -37,9 +37,13 @@ function App() {
     fetch(projects_URL)
     .then(response => response.json())
     .then(data => {
-      
-       setProjects(data)
-    
+      const projects_array = []
+      data.map((item)=>{
+        if(item.user_id === user_id){
+          projects_array.push(item)
+        }
+      })
+    setProjects(projects_array)
     })
    },[user_id])
   
