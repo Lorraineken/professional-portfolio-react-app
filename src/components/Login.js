@@ -52,7 +52,7 @@ function Login({setUser,setId}){
           <div className="d-flex justify-content-around align-items-center mb-4">
           </div>
           <button type="submit" className="btn btn-primary btn-lg btn-block">Sign in</button>
-
+           <button className="btn btn-secondary btn-lg btn-block">Sign Up</button>
           </form>
         </div>
       </div>
