@@ -31,7 +31,7 @@ function UserForm(){
     }
 
     return (
-        <form className="card mt-5"   onSubmit={(e)=>handleSubmit(e)}>
+        <form className="card container mt-5"   onSubmit={(e)=>handleSubmit(e)}>
           <h4 className="card-header">New User</h4>
           <label htmlFor="name">Name: </label>
           <input type="text" name="name"  onChange={(e) => setName(e.target.value)}/>
