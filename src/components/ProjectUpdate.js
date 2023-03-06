@@ -15,7 +15,7 @@ function ProjectUpdate({project_id}){
 
     function handleSubmit(e){
         e.preventDefault()
-        fetch(`http://localhost:9292/projects/update/${project_id}`,{
+        fetch(`https://lorraine-sinatra-professional-portfolio.onrender.com/projects/update/${project_id}`,{
             method:'PUT',
             body:JSON.stringify(project_details)
         })

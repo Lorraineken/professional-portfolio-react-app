@@ -14,7 +14,7 @@ function SkillUpdate({skill_id}){
 
     function handleSubmit(e){
         e.preventDefault()
-        fetch(`http://localhost:9292/skills/update/${skill_id}`,{
+        fetch(`https://lorraine-sinatra-professional-portfolio.onrender.com/skills/update/${skill_id}`,{
             method:'PUT',
             body:JSON.stringify(skill_details)
         })

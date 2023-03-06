@@ -9,7 +9,7 @@ function Home({user_name,user_skills,projects,setSkillId,setProjectId}){
     
 
     function deleteSkill(id){
-        fetch(`http://localhost:9292/skills/destroy/${id}`,{
+        fetch(`https://lorraine-sinatra-professional-portfolio.onrender.com/skills/destroy/${id}`,{
             method: 'DELETE'
            })
     }
@@ -33,7 +33,7 @@ function Home({user_name,user_skills,projects,setSkillId,setProjectId}){
     })
 
     function deleteProject(id){
-       fetch(`http://localhost:9292/projects/destroy/${id}`,{
+       fetch(`https://lorraine-sinatra-professional-portfolio.onrender.com/projects/destroy/${id}`,{
         method: 'DELETE'
        })
     }

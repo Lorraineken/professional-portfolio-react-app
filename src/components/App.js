@@ -11,8 +11,8 @@ import UserForm from './UserForm';
 
 function App() {
 
-  const skills_URL ='http://localhost:9292/skills'
-  const projects_URL = 'http://localhost:9292/projects'
+  const skills_URL ='https://lorraine-sinatra-professional-portfolio.onrender.com/skills'
+  const projects_URL = 'https://lorraine-sinatra-professional-portfolio.onrender.com/projects'
 
    const [user_name,setUser] = useState("")
    const [user_id,setId] = useState(0)

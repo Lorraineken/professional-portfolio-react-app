@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function SkillForm({user_id}){
 
-    const addSkillURL='http://localhost:9292/skills/create'
+    const addSkillURL='https://lorraine-sinatra-professional-portfolio.onrender.com/skills/create'
 
     const [skillName,setSkillName] = useState("")
     const [category,setCategory] = useState("")
