@@ -10,14 +10,28 @@ Once logged in the use can view,add,update and delete their skills and projects.
 
 1. Sign up of a new user
 
-   
+   ![NEW USER](./screens/create_user.png?raw=true "NEW USER")
 
 2. Logging in
-3. Add skill
-4. Add project 
-5. Update skill 
-6. Update project
-7. Delete skill
+
+   ![LOGIN PAGE](./screens/login_page.png?raw=true "LOGIN PAGE")
+
+3. Add skill and project
+
+   ![ADD SKILL_PROJECT](./screens/add_skill_and_project.png?raw=true "ADD SKILL AND PROJECT")
+
+4. Update skill 
+
+   ![UPDATE SKILL](./screens/update_skill_form.png?raw=true "UPDATE SKILL FORM")
+
+5. Update project
+   
+   ![UPDATE PROJECT](./screens/update_project_form.png?raw=true "UPDATE PROJECT FORM")   
+
+
+6. Delete skill
+
+   ![DELETE SKILL](./screens/delete_skill.png?raw=true "DELETE SKILL")
 
 Below is a link to the server's repo
 
