@@ -6,6 +6,7 @@ import Home from './Home';
 import ProjectForm from './ProjectForm';
 import SkillForm from './SkillForm';
 import SkillUpdate from './SkillUpdate';
+import ProjectUpdate from './ProjectUpdate';
 
 function App() {
 
@@ -72,6 +73,10 @@ function App() {
         <Route
           path = '/updateskill'
           element ={<SkillUpdate skill_id={updateSkillId}/>}
+        />
+        <Route
+         path ='/updateproject'
+         element ={<ProjectUpdate />}
         />
       </Routes>
     </div>
