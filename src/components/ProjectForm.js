@@ -30,7 +30,7 @@ function ProjectForm({user_id}){
 
     return (
          
-         <form className="card mt-5"  id="add-details" onSubmit={(e)=>handleSubmit(e)}>
+         <form className="card mt-5 container"  id="add-details" onSubmit={(e)=>handleSubmit(e)}>
           <h4 className="card-header">Add New Project</h4>
           <label htmlFor="name">Name: </label>
           <input type="text" name="name" id="new-name" onChange={(e) => setProjName(e.target.value)}/>

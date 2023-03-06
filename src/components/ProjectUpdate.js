@@ -23,7 +23,7 @@ function ProjectUpdate({project_id}){
     }
 
     return (
-        <form className="card mt-5"  id="add-details" onSubmit={(e)=>handleSubmit(e)}>
+        <form className="card container mt-5"  id="add-details" onSubmit={(e)=>handleSubmit(e)}>
         <h4 className="card-header">Update Project</h4>
         <label htmlFor="name">Name: </label>
         <input type="text" name="name" id="new-name" onChange={(e) =>setProjectName(e.target.value)}/>
