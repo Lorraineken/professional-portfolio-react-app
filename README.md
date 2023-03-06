@@ -6,6 +6,10 @@ Each new user can signup to create an account. Once the user has an account they
 
 Once logged in the use can view,add,update and delete their skills and projects. For any change done the user can only view the change after logging out and logging back in.
 
+Below is a link to the server's repo
+
+   https://github.com/Lorraineken/phase3-professional-portfolio-project
+
 
 # Getting Started
 In order for you to use the content on this repo ensure you have the following:
