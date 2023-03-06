@@ -6,6 +6,19 @@ Each new user can signup to create an account. Once the user has an account they
 
 Once logged in the use can view,add,update and delete their skills and projects. For any change done the user can only view the change after logging out and logging back in.
 
+## Preview of the Application
+
+1. Sign up of a new user
+
+   
+
+2. Logging in
+3. Add skill
+4. Add project 
+5. Update skill 
+6. Update project
+7. Delete skill
+
 Below is a link to the server's repo
 
    https://github.com/Lorraineken/phase3-professional-portfolio-project
@@ -42,6 +55,7 @@ Follow the steps below to use this repo in your machine
 - Install required dependencies from npm
 
       npm install
+      
 - Run the application on the browser
 
       npm start
