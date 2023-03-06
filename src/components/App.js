@@ -18,6 +18,7 @@ function App() {
    const [user_skills,setSkills] = useState([])
    const [projects,setProjects] = useState([])
    const [updateSkillId,setSkillId] = useState(0)
+   const [updateProjectId,setProjectId] = useState(0)
 
   
 
@@ -60,7 +61,7 @@ function App() {
         />
         <Route
         path ="/home"
-        element ={<Home user_name={user_name} user_skills={user_skills} projects={projects} setSkillId={setSkillId}/>}
+        element ={<Home user_name={user_name} user_skills={user_skills} projects={projects} setSkillId={setSkillId} setProjectId={setProjectId}/>}
         />
         <Route
          path = "/newproject"
@@ -76,7 +77,7 @@ function App() {
         />
         <Route
          path ='/updateproject'
-         element ={<ProjectUpdate />}
+         element ={<ProjectUpdate project_id ={updateProjectId}/>}
         />
       </Routes>
     </div>

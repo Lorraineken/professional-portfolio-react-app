@@ -2,7 +2,7 @@
 import React, {useState}from "react";
 import {Link, useNavigate} from "react-router-dom";
 
-function Home({user_name,user_skills,projects,setSkillId}){
+function Home({user_name,user_skills,projects,setSkillId,setProjectId}){
 
 
     const navigate = useNavigate();
@@ -46,7 +46,10 @@ function Home({user_name,user_skills,projects,setSkillId}){
         return(
         <div>
         <p>{`Name: ${item.name}`}
-        <button>Update</button>
+        <button onClick={() =>{
+             navigate('/updateproject')
+             return  setProjectId(item.id)
+        }}>Update</button>
         <button onClick={() => deleteProject(item.id)}>x</button>
         </p> 
         <p>{`Description: ${item.description}`}</p>
